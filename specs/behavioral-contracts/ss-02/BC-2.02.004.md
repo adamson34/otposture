@@ -50,8 +50,8 @@ Every store load validates schema and verifies integrity. Corruption is detected
 |----|-------------|-------------------|
 | EC-001 | Truncated final snapshot record (power loss before BC-2.02.002 commit — shouldn't happen, but disks lie) | Tail truncation detected; prefix loads; message distinguishes "incomplete tail" from "corrupted middle" |
 | EC-002 | Store schema version newer than binary | E-STORE-004 "created by a newer otposture"; no load attempt |
-| EC-003 | Store schema version older than binary | Transparent in-memory upgrade; on-disk migration only with explicit `store upgrade` command |
-| EC-004 | Unknown goal_id in an Answer (catalog/store drift) | Load succeeds with warning; scoring surfaces it per DEC-011/DEC-012 rules |
+| EC-003 | Store schema version older than binary | Transparent in-memory upgrade; on-disk migration only with explicit `upgrade` command (BC-6.06.001) |
+| EC-004 | Unknown goal_id in an Answer at load (hand edit or out-of-band catalog swap) | **Quarantine:** load succeeds with warning E-STORE-005; the orphan answer never enters the Assessment's scoring answer set (preserving BC-3.03.001 Inv 2 / VP-030 at the scoring boundary); it remains on disk untouched and is listed by `status`/`verify` until the user removes it or migrates to a catalog containing the goal |
 
 ## Canonical Test Vectors
 

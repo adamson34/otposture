@@ -31,7 +31,7 @@ Mutating commands acquire an advisory lock on the store; a concurrent second wri
 
 ## Preconditions
 
-1. Store exists; a mutating command (assess/snapshot/override/migrate/store-upgrade) is invoked.
+1. Store exists; a mutating command (assess/answer/override/snapshot/migrate/upgrade) is invoked.
 
 ## Postconditions
 

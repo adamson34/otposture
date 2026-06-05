@@ -33,7 +33,7 @@ Technical sophistication assumption (validated with the author, himself the prim
 ### In Scope (MVP)
 
 - **Guided assessment** against the CISA CPG 2.0 goal set via CLI prompts — ordinal answers (Not / Partially / Largely / Fully Implemented, N/A, Unknown), completable incrementally in minutes-scale sessions.
-- **Defensible scoring** — maturity band as the headline (floor rule: band is capped while any Critical-tier control is Not Implemented), percentage and signed delta as labeled sub-metrics, per-domain sub-scores. Weights explicit and inspectable in the data.
+- **Defensible scoring** — maturity band as the headline (floor rule: band is capped while any Critical-tier control is Not Implemented or Unknown), percentage and signed delta as labeled sub-metrics, per-domain sub-scores. Weights explicit and inspectable in the data.
 - **Versioned posture history & diff** — posture state stored as human-readable, git-friendly files pinned to a framework version; `diff`/`status` show what moved and why, with every delta attributed to its driver controls.
 - **Executive one-pager generator** — `report --exec` renders a styled static HTML (print-to-PDF) summary: band, trend, biggest movers, top open risks, suggested "next best actions" ranked by impact vs. effort.
 - **CPG 2.0 catalog as data** — the framework encoded in a machine-readable (OSCAL-shaped) catalog file, separate from engine code, so additional frameworks can plug in later.

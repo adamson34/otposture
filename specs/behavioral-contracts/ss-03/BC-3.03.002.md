@@ -35,7 +35,7 @@ removal_reason: null
 
 ## Postconditions
 
-1. Session presents Goals filtered/ordered by: `--function` (one function), `--only unknown|stale` (default `unknown` for resume behavior), or `--all`; default order is catalog order.
+1. Session presents Goals filtered/ordered by: `--function <FN>` (one function) and `--only <unknown|all>` (default `unknown` for resume behavior; the two flags compose as an intersection); default order is catalog order. A `stale` filter token is reserved for post-MVP CAP-012 and is not part of the v1 surface.
 2. Each accepted answer is durably persisted before the next prompt (BC-3.03.001).
 3. Session end (finish, quit, or kill) loses at most the single in-flight prompt; a summary shows answered/skipped/remaining counts and current score preview.
 
@@ -48,7 +48,7 @@ removal_reason: null
 
 | ID | Description | Expected Behavior |
 |----|-------------|-------------------|
-| EC-001 | All goals already answered, `--only unknown` | "Nothing to assess" with hint to use `--all` to revisit |
+| EC-001 | All goals already answered, `--only unknown` | "Nothing to assess" with hint to use `--only all` to revisit |
 | EC-002 | Terminal killed mid-session (SSH drop) | All previously confirmed answers durable; re-running resumes at remaining unknowns (FM-007) |
 | EC-003 | User answers `back` | Returns to previous goal showing its just-recorded answer for correction (correction = new answer, normal replace semantics) |
 | EC-004 | Window resize / narrow terminal (80 col) | Goal text wraps readably; no truncated prompts |

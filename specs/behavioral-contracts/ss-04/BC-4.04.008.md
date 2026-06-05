@@ -37,7 +37,7 @@ Ranks improvable goals by `potential_gain / effort` using static catalog metadat
 
 1. Candidate set = goals with level < FI and level ≠ N/A.
 2. Each candidate scored: `potential_gain` = percent increase if raised to FI (computed via the real formula, not approximated); `effort_rank` from catalog Ease metadata (Simple=1, Moderate=2, Complex=3); priority = potential_gain / effort_rank.
-3. Output: top-N (default 5) with goal, current level, potential gain (display-rounded), effort label, and — when the floor rule is active — gating critical goals **always listed first regardless of ratio** (closing the floor is categorically the next best action).
+3. Output: top-N (default 5) with goal, current level, potential gain (display-rounded), effort label, and CISA impact rating (displayed for context; **not** part of the v1 ranking formula — `potential_gain` already encodes weight-adjusted score impact, and double-counting impact would be indefensible). When the floor rule is active, gating critical goals are **always listed first regardless of ratio** (closing the floor is categorically the next best action).
 4. Ties broken deterministically: higher potential_gain, then catalog order.
 
 ## Invariants

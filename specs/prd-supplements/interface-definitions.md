@@ -40,8 +40,11 @@ COMMANDS:
               --exec  --out <PATH> (default: ./otposture-report-<date>-s<seq>.html)
               --from <REF> --to <REF> (default: previous vs latest)  --force
   verify    Recompute and check all cached scores & integrity    [--json]
+              (read-only: reports mismatches and orphans, never repairs or rewrites)
   migrate   Move store to a new catalog version
               --catalog <PATH>  --mapping <PATH>  --series-break (explicit opt-in when unmappable)
+              (no mapping + no --series-break => E-VAL-010 refusal; breaks are never implicit)
+  upgrade   Migrate the store schema to this binary's version (explicit, in-place, prior files backed up)
 
 GLOBAL: --store <DIR> (default: ./)  --debug  --no-color  --help  --version
 ```
@@ -85,7 +88,7 @@ GLOBAL: --store <DIR> (default: ./)  --debug  --no-color  --help  --version
   },
   "overrides": [{"goal": "3.H", "tier": "standard", "rationale": "...", "created_at": "..."}],
   "series_breaks": [{"at_seq": 12, "from_version": "2.0.0", "to_version": "2.1.0", "bridged": false}],
-  "next_actions": [{"goal": "3.D", "gain": 0.06, "effort": "simple", "floor_gating": false}]
+  "next_actions": [{"goal": "3.D", "gain": 0.06, "effort": "simple", "impact": "high", "floor_gating": false}]
 }
 ```
 

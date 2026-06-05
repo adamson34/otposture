@@ -51,7 +51,7 @@ removal_reason: null
 |----|-------------|-------------------|
 | EC-001 | Goal split (one old → two new) | Old answer back-casts to both new goals with a `derived-from-split` marker; flagged for re-assessment |
 | EC-002 | Tier override on a dropped goal | Override preserved in originals, listed as orphaned in migration report (DEC-012); never silently discarded |
-| EC-003 | No mapping table available for the version pair | Back-cast impossible: migration records a Series Break instead (BC-2.02.007) after explicit user confirmation |
+| EC-003 | No mapping table available for the version pair | Back-cast impossible: migration records a Series Break instead (BC-2.02.007) only after explicit interactive confirmation or the `--series-break` flag; non-interactive without the flag is refused with E-VAL-010 — breaks are never implicit |
 
 ## Canonical Test Vectors
 

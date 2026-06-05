@@ -27,7 +27,7 @@ removal_reason: null
 
 ## Description
 
-The v1 command surface is fixed and small: `init`, `assess`, `answer`, `override`, `snapshot`, `status`, `diff`, `report`, `verify`, `migrate`, plus `--help`/`--version`. Exit codes are stable, documented contract (scripts and CI depend on them).
+The v1 command surface is fixed and small: `init`, `assess`, `answer`, `override`, `snapshot`, `status`, `diff`, `report`, `verify`, `migrate`, `upgrade`, plus `--help`/`--version`. Exit codes are stable, documented contract (scripts and CI depend on them).
 
 ## Preconditions
 
@@ -43,7 +43,7 @@ The v1 command surface is fixed and small: `init`, `assess`, `answer`, `override
 
 1. Exit code classes map 1:1 to error-taxonomy categories (prd-supplements/error-taxonomy.md) — adding an error never reuses a foreign class.
 2. Warnings never change a success exit code (severity `degraded` ⇒ exit 0 + stderr warning).
-3. Diagnostics go to stderr; data/results to stdout (pipeable).
+3. Diagnostics go to stderr; data/results to stdout (pipeable). **Single documented exception:** under `--json`, an error is itself the machine result — one JSON error object on stdout, human diagnostics suppressed, exit code unchanged (BC-6.06.004 EC-001).
 
 ## Edge Cases
 

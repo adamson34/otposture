@@ -43,7 +43,7 @@ Recording an answer sets one Goal's Implementation Level in the Assessment, with
 ## Invariants
 
 1. No answer field carries personal identification; notes are documented non-PII (DI-013).
-2. An Answer never references a goal absent from the pinned catalog (DEC-011).
+2. An Answer never references a goal absent from the pinned catalog (DEC-011). Enforced at recording time; answers found orphaned at load (hand edits, out-of-band catalog swaps) are quarantined per BC-2.02.004 EC-004 and never enter the scoring answer set — so VP-030 holds at the scoring boundary regardless of on-disk state.
 
 ## Edge Cases
 

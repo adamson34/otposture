@@ -41,10 +41,12 @@ traces_to: prd.md
 | E-VAL-007 | broken | 3 | `assess` needs a TTY / use `answer` for scripting |
 | E-VAL-008 | broken | 3 | Override requires a non-empty rationale (DI-006) |
 | E-VAL-009 | broken | 3 | Ambiguous snapshot reference / candidates listed by seq |
+| E-VAL-010 | broken | 3 | Migration has no mapping for this version pair and `--series-break` was not passed / supply `--mapping` or explicitly opt into a series break |
 | E-STORE-001 | broken | 4 | Store already exists; `init` never overwrites |
 | E-STORE-002 | broken | 4 | Corrupt record at <file:record>; valid prefix loadable read-only / repair guidance |
 | E-STORE-003 | degraded | 0 (warning via `verify`) | Cached score mismatch — tamper or engine drift; details listed |
 | E-STORE-004 | broken | 4 | Store written by newer otposture / upgrade the binary |
+| E-STORE-005 | degraded | 0 (warning) | Orphan answer at load (goal absent from pinned catalog) — quarantined from scoring; listed by status/verify until removed or migrated |
 | E-LOCK-001 | broken | 5 | Store in use by PID since T / wait or investigate; stale locks auto-break |
 | E-CAT-001 | broken | 6 | Catalog structurally unparseable / check path & format |
 | E-CAT-002 | broken | 6 | Catalog schema newer than binary / upgrade binary |

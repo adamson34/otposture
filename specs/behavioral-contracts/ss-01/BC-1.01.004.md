@@ -35,7 +35,7 @@ The catalog file shipped with the binary faithfully encodes CISA CPG 2.0 (Decemb
 
 ## Postconditions
 
-1. The bundled catalog contains exactly **34 goals** in six functions with counts: GOVERN 5 (1.A–1.E), IDENTIFY 5 (2.A–2.E), PROTECT 19 (3.A–3.S), DETECT 2 (4.A–4.B), RESPOND 2 (5.A–5.B), RECOVER 1 (6.A) — per ASM-002 validation against the official PDF.
+1. The bundled catalog covers exactly the **34 official goals** in six functions with counts: GOVERN 5 (1.A–1.E), IDENTIFY 5 (2.A–2.E), PROTECT 19 (3.A–3.S), DETECT 2 (4.A–4.B), RESPOND 2 (5.A–5.B), RECOVER 1 (6.A) — per ASM-002 validation against the official PDF. Documented sub-item splits (EC-002) roll up to their official parent ID and do not change this coverage assertion.
 2. Each goal carries: official goal ID, title, outcome text (verbatim from the TLP:CLEAR source), CISA Cost/Impact/Ease ratings, `default_tier` with a written rationale, and `weight`.
 3. `licensing_provenance` cites the source document, its TLP:CLEAR marking, and retrieval date.
 4. `catalog_id = "cisa-cpg"`, `version` tracks the CPG edition (e.g., `2.0.0`).
@@ -56,7 +56,7 @@ The catalog file shipped with the binary faithfully encodes CISA CPG 2.0 (Decemb
 
 | Input | Expected Output | Category |
 |-------|----------------|----------|
-| Count goals per function in bundled catalog | 5/5/19/2/2/1, total 34 | happy-path |
+| Count official goal IDs covered per function (sub-items roll up to parents) | 5/5/19/2/2/1, total 34 | happy-path |
 | Grep bundled catalog for IEC 62443 requirement text | No matches (ID references at most) | edge-case |
 | Validate bundled catalog with BC-1.01.002 rules | Zero defects | happy-path |
 
@@ -65,7 +65,7 @@ The catalog file shipped with the binary faithfully encodes CISA CPG 2.0 (Decemb
 | VP | Property | Proof Method |
 |----|----------|-------------|
 | VP-007 | Bundled catalog passes full validation on every build (CI golden test) | manual/CI |
-| VP-008 | Goal IDs exactly match the official CPG 2.0 ID set | manual/CI golden |
+| VP-008 | Every goal ID is an official CPG 2.0 ID or a changelog-documented sub-item of one (`<official-id>.<letter>`), and all 34 official IDs are covered | manual/CI golden |
 
 ## Traceability
 

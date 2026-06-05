@@ -38,7 +38,7 @@ otposture models **continuous OT security posture tracking** for a single indust
 |---------|------|-----------------|---------|
 | Domain Capabilities | capabilities.md | product-owner, architect, story-writer | CAP-001..013 capability catalog with pipeline view |
 | Domain Entities | entities.md | architect, product-owner | Entity model, aggregates (Posture Store / Catalog), relationships |
-| Domain Invariants | invariants.md | product-owner, architect | DI-001..012 business rules incl. floor rule, determinism, attribution |
+| Domain Invariants | invariants.md | product-owner, architect | DI-001..013 business rules incl. floor rule, determinism, attribution, no-PII |
 | Domain Events | events.md | architect | State transitions, ordering constraints, processing pipeline |
 | Edge Cases | edge-cases.md | story-writer, test-writer | DEC-001..012 domain-level edge cases |
 | Assumptions | assumptions.md | product-owner, test-writer | ASM-001..008 with validation methods; ASM-001/002 are pre-implementation gates |
