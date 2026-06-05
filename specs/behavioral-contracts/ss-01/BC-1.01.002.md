@@ -37,7 +37,7 @@ Structural validation runs after parsing and before any catalog use. A defective
 
 1. A valid catalog is returned for use; an invalid catalog yields E-CAT-003 with a defect list and a non-zero exit.
 2. Each defect names: the rule violated, the offending element (`goal_id`/`function_id`/field), and the expected condition.
-3. Validation checks at minimum: (a) unique `goal_id`s; (b) every `goal.function_id` resolves; (c) every `weight > 0`; (d) `default_tier` ∈ {Critical, High, Standard}; (e) exactly 4 band thresholds, strictly increasing, within [0,1]; (f) non-empty `licensing_provenance` (DI-009); (g) valid semver `version`; (h) impact/effort metadata present for every goal (CAP-009 dependency).
+3. Validation checks at minimum: (a) unique `goal_id`s; (b) every `goal.function_id` resolves; (c) every `weight > 0`; (d) `default_tier` ∈ {Critical, High, Standard}; (e) an ordered band list of N ≥ 2 bands with exactly N−1 interior thresholds, strictly increasing, each in (0,1) exclusive — the lowest band starts at 0 implicitly, and N ≥ 2 guarantees the positional floor-cap band exists (DI-003); bundled catalog: 4 bands, 3 thresholds; (f) non-empty `licensing_provenance` (DI-009); (g) valid semver `version`; (h) impact/effort metadata present for every goal (CAP-009 dependency).
 
 ## Invariants
 
@@ -51,6 +51,7 @@ Structural validation runs after parsing and before any catalog use. A defective
 | EC-001 | Catalog with 3 independent defects | All 3 reported in one invocation, machine-parseable order (stable sort by goal_id then rule) |
 | EC-002 | Duplicate goal_id differing only in case ("1.A" vs "1.a") | Treated as duplicate — IDs are case-insensitive-unique, stored canonical-case |
 | EC-003 | Band thresholds equal (non-strict ordering) | Defect (e); thresholds must be strictly increasing |
+| EC-004 | Single-band catalog (N = 1) | Defect (e); the floor-cap band (DI-003) would be undefined — minimum two bands |
 
 ## Canonical Test Vectors
 

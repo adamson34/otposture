@@ -38,7 +38,7 @@ A syntactically and structurally valid catalog file loads into an in-memory cata
 
 1. Returns a Catalog exposing: `catalog_id`, `version` (semver), `framework_name`, `licensing_provenance`, ordered Functions, and Goals with `goal_id`, `title`, `function_id`, `weight`, `default_tier`, `impact_meta`, `effort_meta`, `outcome_text`.
 2. Goal count and Function count equal the counts in the file; no goal is dropped, reordered across functions, or synthesized.
-3. Band thresholds (4 named bands) are exposed as ordered numeric boundaries.
+3. The ordered band list is exposed: N ≥ 2 named bands with exactly N−1 interior thresholds as ordered numeric boundaries (bundled catalog: 4 bands, 3 thresholds).
 
 ## Invariants
 

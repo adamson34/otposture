@@ -31,11 +31,11 @@ The headline band (Foundational / Developing / Managed / Resilient) derives from
 
 ## Preconditions
 
-1. Percent computed (BC-4.04.001); catalog provides 4 bands with strictly increasing thresholds `t1 < t2 < t3` partitioning [0,1].
+1. Percent computed (BC-4.04.001); catalog provides an ordered list of N ≥ 2 bands with exactly N−1 strictly increasing interior thresholds `t1 < … < t_{N−1}` in (0,1), partitioning [0,1] (validated by BC-1.01.002 rule e; bundled catalog: N = 4).
 
 ## Postconditions
 
-1. Pre-floor band: Foundational if percent < t1; Developing if t1 ≤ percent < t2; Managed if t2 ≤ percent < t3; Resilient if percent ≥ t3 (boundary belongs to the higher band).
+1. Pre-floor band: band 1 (lowest) if percent < t1; band i+1 if t_i ≤ percent < t_{i+1}; band N (highest) if percent ≥ t_{N−1} — a boundary always belongs to the higher band. For the bundled catalog: Foundational < t1 ≤ Developing < t2 ≤ Managed < t3 ≤ Resilient.
 2. Result carries both `band_uncapped` and final `band` so surfaces can show "Managed → capped to Developing (floor rule)".
 3. Undefined percent (all N/A) yields no band — surfaces show "not scoreable".
 

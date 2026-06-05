@@ -131,7 +131,11 @@ catalog_id: cisa-cpg
 version: 2.0.0
 framework_name: "CISA Cross-Sector Cybersecurity Performance Goals"
 licensing_provenance: "CPG Report 2.0 (Dec 2025), TLP:CLEAR, retrieved 2026-06-05"
-bands: {foundational: 0.0, developing: 0.40, managed: 0.65, resilient: 0.85}  # thresholds — rationale required (PRD OQ2)
+bands:                      # ordered low->high; N >= 2; first band has no threshold (starts at 0)
+  - name: foundational      # thresholds: rationale required (PRD OQ2)
+  - {name: developing, threshold: 0.40}
+  - {name: managed, threshold: 0.65}
+  - {name: resilient, threshold: 0.85}
 functions: [{id: govern, name: GOVERN, order: 1}, ...]
 goals:
   - goal_id: "1.A"

@@ -20,7 +20,7 @@ traces_to: L2-INDEX.md
 
 | Entity | Description | Key Attributes | Invariants |
 |--------|-------------|---------------|------------|
-| **FrameworkCatalog** | Immutable, versioned framework encoding (CPG 2.0 in v1). | `catalog_id`, `version` (semver), `framework_name`, `licensing_provenance`, `band_thresholds[4]`, Goals[], Functions[] | Immutable once published; provenance mandatory (DI-009); thresholds and weights live here, not in code (DI-008). |
+| **FrameworkCatalog** | Immutable, versioned framework encoding (CPG 2.0 in v1). | `catalog_id`, `version` (semver), `framework_name`, `licensing_provenance`, `bands[]` (ordered, N ≥ 2, with N−1 interior thresholds), Goals[], Functions[] | Immutable once published; provenance mandatory (DI-009); thresholds and weights live here, not in code (DI-008). |
 | **Goal** | One assessable framework item. | `goal_id` (catalog-scoped, e.g. CPG ref), `title`, `function_id`, `weight` (>0), `default_tier` (Critical/High/Standard), `impact_meta`, `effort_meta`, `text_provenance` | `goal_id` unique within catalog (DEC-007); tier default carries citation/rationale in catalog. |
 | **Function** | Goal grouping for sub-scores (CSF six functions for CPG 2.0). | `function_id`, `name`, `order` | Every Goal references exactly one Function. |
 | **Site** | The single facility this store describes. | `name`, `sector`, `created_at`, free-form metadata | Exactly one Site per Posture Store (v1). |
