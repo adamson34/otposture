@@ -77,7 +77,7 @@ A Delta between two comparable snapshots decomposes the total percent change int
 | L2 Capability | CAP-006 |
 | L2 Domain Invariants | DI-005 |
 | L2 Edge Cases | DEC-008, DEC-009, DEC-010 |
-| Architecture Module | (filled by architect) |
+| Architecture Module | op-score (module-decomposition.md) |
 | Stories | (filled by story-writer) |
 
 ## Related BCs

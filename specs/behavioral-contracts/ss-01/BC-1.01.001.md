@@ -74,7 +74,7 @@ A syntactically and structurally valid catalog file loads into an in-memory cata
 |-------|-------|
 | L2 Capability | CAP-001 |
 | L2 Domain Invariants | DI-007, DI-008 |
-| Architecture Module | (filled by architect) |
+| Architecture Module | op-catalog (module-decomposition.md) |
 | Stories | (filled by story-writer) |
 
 ## Related BCs

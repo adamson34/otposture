@@ -75,7 +75,7 @@ Ranks improvable goals by `potential_gain / effort` using static catalog metadat
 | L2 Capability | CAP-009 |
 | L2 Domain Invariants | DI-008, DI-010 |
 | L2 Assumptions | ASM-005 |
-| Architecture Module | (filled by architect) |
+| Architecture Module | op-score (module-decomposition.md) |
 | Stories | (filled by story-writer) |
 
 ## Related BCs

@@ -73,7 +73,7 @@ When history cannot (or the user chooses not to) be back-cast across a catalog c
 | L2 Capability | CAP-011 |
 | L2 Domain Invariants | DI-001, DI-002 |
 | L2 Edge Cases | DEC-003 |
-| Architecture Module | (filled by architect) |
+| Architecture Module | op-store (module-decomposition.md) |
 | Stories | (filled by story-writer) |
 
 ## Related BCs

@@ -76,7 +76,7 @@ The single scoring formula (DI-012): `percent = Σ(weight_g × value_g) / Σ(wei
 |-------|-------|
 | L2 Capability | CAP-004 |
 | L2 Domain Invariants | DI-004, DI-010, DI-012 |
-| Architecture Module | (filled by architect) |
+| Architecture Module | op-score (module-decomposition.md) |
 | Stories | (filled by story-writer) |
 
 ## Related BCs

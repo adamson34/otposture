@@ -40,5 +40,6 @@ traces_to: ARCH-INDEX.md
 
 ## Rules enforced by CI
 
-- op-score, op-store::codec, op-assess (minus Prompt), op-render: `#![forbid(unsafe_code)]` + no I/O-capable crates in their dependency trees (cargo-deny per-crate policy).
+- **op-score:** `#![forbid(unsafe_code)]` + no I/O-capable crates in its dependency tree — enforceable at crate granularity via cargo-deny (VP-051), since op-score depends on nothing in the workspace.
+- **op-store::codec, op-assess (minus Prompt), op-render:** `#![forbid(unsafe_code)]` + **submodule-level lint discipline** (clippy import lints denying `std::fs`/`std::net`/`std::process` in these modules + review gate). cargo-deny cannot apply here — these crates legitimately depend on the op-store *crate* (for types), whose `fs` submodule carries filesystem I/O; the ban is on what the *modules* import, not what the crate graph contains.
 - Any new module must be classified in this file before merge (review gate).

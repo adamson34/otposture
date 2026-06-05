@@ -79,7 +79,7 @@ The credibility centerpiece (DI-003): while any effective-Critical-tier goal is 
 | L2 Domain Invariants | DI-003 |
 | L2 Edge Cases | DEC-005, DEC-010 |
 | L2 Risks | R-002 (credibility) |
-| Architecture Module | (filled by architect) |
+| Architecture Module | op-score (module-decomposition.md) |
 | Stories | (filled by story-writer) |
 
 ## Related BCs

@@ -74,7 +74,7 @@ The catalog file shipped with the binary faithfully encodes CISA CPG 2.0 (Decemb
 | L2 Capability | CAP-001 |
 | L2 Domain Invariants | DI-008, DI-009 |
 | L2 Assumptions | ASM-001 (validated), ASM-002 (validated), ASM-005 |
-| Architecture Module | (filled by architect) |
+| Architecture Module | op-catalog (module-decomposition.md) |
 | Stories | (filled by story-writer) |
 
 ## Related BCs

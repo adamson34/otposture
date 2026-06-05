@@ -73,7 +73,7 @@ Report generation never silently overwrites and never half-writes (FM-008). Pre-
 |-------|-------|
 | L2 Capability | CAP-008 |
 | L2 Failure Modes | FM-008 |
-| Architecture Module | (filled by architect) |
+| Architecture Module | op-cli (module-decomposition.md) |
 | Stories | (filled by story-writer) |
 
 ## Related BCs

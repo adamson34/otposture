@@ -74,7 +74,7 @@ Goals without an explicit Answer behave as `Unknown` everywhere: scored 0, flagg
 | L2 Capability | CAP-003, CAP-004 |
 | L2 Domain Invariants | DI-003, DI-004, DI-011 |
 | L2 Edge Cases | DEC-004 |
-| Architecture Module | (filled by architect) |
+| Architecture Module | op-assess (module-decomposition.md) |
 | Stories | (filled by story-writer) |
 
 ## Related BCs

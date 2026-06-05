@@ -73,7 +73,7 @@ The v1 command surface is fixed and small: `init`, `assess`, `answer`, `override
 | Field | Value |
 |-------|-------|
 | L2 Capability | CAP-007 (and all command-backed CAPs) |
-| Architecture Module | (filled by architect) |
+| Architecture Module | op-cli (module-decomposition.md) |
 | Stories | (filled by story-writer) |
 
 ## Related BCs

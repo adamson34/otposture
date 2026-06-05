@@ -73,7 +73,7 @@ The entire scoring computation (percent, sub-scores, band, floor, gaps) is one p
 | L2 Capability | CAP-004 |
 | L2 Domain Invariants | DI-010 |
 | L2 Risks | R-005 |
-| Architecture Module | (filled by architect — the pure core crate) |
+| Architecture Module | op-score — the pure core crate (module-decomposition.md) |
 | Stories | (filled by story-writer) |
 
 ## Related BCs

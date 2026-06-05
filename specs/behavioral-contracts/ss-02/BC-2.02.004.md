@@ -75,7 +75,7 @@ Every store load validates schema and verifies integrity. Corruption is detected
 | L2 Capability | CAP-002 |
 | L2 Domain Invariants | DI-002, DI-010 |
 | L2 Failure Modes | FM-001 |
-| Architecture Module | (filled by architect) |
+| Architecture Module | op-store (module-decomposition.md) |
 | Stories | (filled by story-writer) |
 
 ## Related BCs

@@ -72,7 +72,7 @@ Every loaded catalog exposes a stable `(catalog_id, version)` identity used for 
 |-------|-------|
 | L2 Capability | CAP-001 |
 | L2 Domain Invariants | DI-001, DI-010 |
-| Architecture Module | (filled by architect) |
+| Architecture Module | op-catalog (module-decomposition.md) |
 | Stories | (filled by story-writer) |
 
 ## Related BCs

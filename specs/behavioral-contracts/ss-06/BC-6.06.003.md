@@ -74,7 +74,7 @@ The binary performs **zero network operations** under every command and conditio
 | L2 Capability | All (cross-cutting) |
 | L2 Domain Invariants | DI-007 |
 | Differentiator | "Offline, no-footprint, data-sovereign" |
-| Architecture Module | (filled by architect) |
+| Architecture Module | op-cli (module-decomposition.md) |
 | Stories | (filled by story-writer) |
 
 ## Related BCs

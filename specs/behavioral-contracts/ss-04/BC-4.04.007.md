@@ -74,7 +74,7 @@ Before any Delta is computed, both snapshots must be provably comparable: same c
 | L2 Capability | CAP-006, CAP-011 |
 | L2 Domain Invariants | DI-001 |
 | L2 Edge Cases | DEC-003, DEC-006 |
-| Architecture Module | (filled by architect) |
+| Architecture Module | op-score (module-decomposition.md) |
 | Stories | (filled by story-writer) |
 
 ## Related BCs

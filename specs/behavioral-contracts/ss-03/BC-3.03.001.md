@@ -76,7 +76,7 @@ Recording an answer sets one Goal's Implementation Level in the Assessment, with
 | L2 Capability | CAP-003 |
 | L2 Domain Invariants | DI-011, DI-013 |
 | L2 Edge Cases | DEC-011 |
-| Architecture Module | (filled by architect) |
+| Architecture Module | op-assess (module-decomposition.md) |
 | Stories | (filled by story-writer) |
 
 ## Related BCs

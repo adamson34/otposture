@@ -78,7 +78,7 @@ removal_reason: null
 | L2 Domain Invariants | DI-007 (no external fetches), DI-013 |
 | L2 Failure Modes | FM-004 |
 | L2 Edge Cases | DEC-001, DEC-005 |
-| Architecture Module | (filled by architect) |
+| Architecture Module | op-render (module-decomposition.md) |
 | Stories | (filled by story-writer) |
 
 ## Related BCs

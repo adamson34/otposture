@@ -75,7 +75,7 @@ Store files are human-readable text with fully deterministic serialization: stab
 | L2 Capability | CAP-002, CAP-005 |
 | L2 Domain Invariants | DI-013 |
 | Differentiator | "Git-friendly versioned posture history" (differentiators.md) |
-| Architecture Module | (filled by architect) |
+| Architecture Module | op-store (module-decomposition.md) |
 | Stories | (filled by story-writer) |
 
 ## Related BCs

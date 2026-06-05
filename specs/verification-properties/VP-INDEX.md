@@ -1,6 +1,6 @@
 # Verification Property Index: otposture
 
-> **Sharding model:** all 70 VPs are *defined* in their owning BCs
+> **Sharding model:** all 67 VPs are *defined* in their owning BCs
 > (`specs/behavioral-contracts/ss-NN/`). The 10 formal (Kani) targets additionally
 > have standalone L4 files here with proof harness skeletons and feasibility
 > assessments — they are the proof-lock artifacts for Phase 6 formal hardening.
@@ -36,6 +36,6 @@
 
 | Status | Count |
 |--------|-------|
-| draft (harness not yet written) | 70 |
+| draft (harness not yet written) | 67 |
 | in-development | 0 |
 | verified (locked) | 0 |

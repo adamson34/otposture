@@ -79,7 +79,7 @@ removal_reason: null
 | L2 Capability | CAP-002 |
 | L2 Domain Invariants | DI-002, DI-010 |
 | L2 Failure Modes | FM-003 |
-| Architecture Module | (filled by architect) |
+| Architecture Module | op-store (module-decomposition.md) |
 | Stories | (filled by story-writer) |
 
 ## Related BCs

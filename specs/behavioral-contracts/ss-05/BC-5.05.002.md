@@ -73,7 +73,7 @@ removal_reason: null
 |-------|-------|
 | L2 Capability | CAP-006 |
 | L2 Edge Cases | DEC-008, DEC-009 |
-| Architecture Module | (filled by architect) |
+| Architecture Module | op-render (module-decomposition.md) |
 | Stories | (filled by story-writer) |
 
 ## Related BCs

@@ -72,7 +72,7 @@ Every user-facing error follows one format: stable code, one-line cause, affecte
 |-------|-------|
 | L2 Capability | CAP-007 |
 | L2 Domain Invariants | DI-013 |
-| Architecture Module | (filled by architect) |
+| Architecture Module | op-cli (module-decomposition.md) |
 | Stories | (filled by story-writer) |
 
 ## Related BCs

@@ -74,7 +74,7 @@ removal_reason: null
 | L2 Capability | CAP-003 |
 | L2 Assumptions | ASM-003, ASM-004 |
 | L2 Failure Modes | FM-007 |
-| Architecture Module | (filled by architect) |
+| Architecture Module | op-assess (module-decomposition.md) |
 | Stories | (filled by story-writer) |
 
 ## Related BCs

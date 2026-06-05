@@ -75,7 +75,7 @@ removal_reason: null
 | L2 Capability | CAP-010 |
 | L2 Domain Invariants | DI-006, DI-013 |
 | L2 Edge Cases | DEC-005 |
-| Architecture Module | (filled by architect) |
+| Architecture Module | op-assess (module-decomposition.md) |
 | Stories | (filled by story-writer) |
 
 ## Related BCs

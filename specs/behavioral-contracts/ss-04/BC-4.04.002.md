@@ -73,7 +73,7 @@ Each catalog Function gets a sub-score using the identical formula (BC-4.04.001)
 | L2 Capability | CAP-004 |
 | L2 Domain Invariants | DI-004, DI-012 |
 | L2 Edge Cases | DEC-002 |
-| Architecture Module | (filled by architect) |
+| Architecture Module | op-score (module-decomposition.md) |
 | Stories | (filled by story-writer) |
 
 ## Related BCs

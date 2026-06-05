@@ -29,9 +29,9 @@ traces_to: ARCH-INDEX.md
 
 ## Coverage Accounting
 
-- **Total VPs:** 70 defined across 33 BCs (ranges: 001–008, 010–027, 030–036, 040–059, 070–076, 080–086).
+- **Total VPs:** 67 defined across 33 BCs (ranges: 001–008 = 8, 010–027 = 18, 030–036 = 7, 040–059 = 20, 070–076 = 7, 080–086 = 7).
 - **Every VP has:** owning BC (definition), module (this matrix), method (this matrix). The consistency-validator should fail any future VP added to a BC without a row here.
-- **CRITICAL modules** (op-score, op-store): 10 formal proofs + 19 property suites + fault injection — matches module-criticality.md ≥95% kill-rate intent.
+- **CRITICAL modules** (op-score, op-store): 10 formal proofs + 18 property-test suites (+ VP-057 via review/lint) + fault injection — matches module-criticality.md ≥95% kill-rate intent.
 - **Deliberately thin:** op-cli has zero unit-level VPs; its correctness is the sum of taxonomy mapping (VP-080) and shared-source goldens (VP-086). Adding logic to op-cli that would deserve its own VP is an architecture smell — push it down into a pure crate.
 
 ## Gap Register (known, accepted)

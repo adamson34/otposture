@@ -73,7 +73,7 @@ Every mutation of any store file follows write-temp → fsync → rename. A cras
 |-------|-------|
 | L2 Capability | CAP-002, CAP-005 |
 | L2 Failure Modes | FM-003 |
-| Architecture Module | (filled by architect) |
+| Architecture Module | op-store (module-decomposition.md) |
 | Stories | (filled by story-writer) |
 
 ## Related BCs

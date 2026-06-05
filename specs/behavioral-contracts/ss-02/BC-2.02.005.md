@@ -73,7 +73,7 @@ Mutating commands acquire an advisory lock on the store; a concurrent second wri
 | L2 Capability | CAP-002 |
 | L2 Failure Modes | FM-006 |
 | L2 Assumptions | ASM-008 |
-| Architecture Module | (filled by architect) |
+| Architecture Module | op-store (module-decomposition.md) |
 | Stories | (filled by story-writer) |
 
 ## Related BCs

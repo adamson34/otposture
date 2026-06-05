@@ -76,7 +76,7 @@ Snapshots are the immutable history (DI-002). Each `snapshot` appends a record w
 | L2 Capability | CAP-005 |
 | L2 Domain Invariants | DI-001, DI-002, DI-010 |
 | L2 Edge Cases | DEC-004, DEC-006 |
-| Architecture Module | (filled by architect) |
+| Architecture Module | op-store (module-decomposition.md) |
 | Stories | (filled by story-writer) |
 
 ## Related BCs
