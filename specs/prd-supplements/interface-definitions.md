@@ -74,6 +74,7 @@ GLOBAL: --store <DIR> (default: ./)  --debug  --no-color  --help  --version
   "score": {
     "scoreable": true,
     "percent": 0.6765,
+    "percent_exact": "23/34",
     "band": "developing",
     "band_uncapped": "managed",
     "floor_rule": {"triggered": true, "gaps": [{"goal": "3.H", "level": "unknown", "tier_source": "default"}]},
@@ -111,15 +112,15 @@ Error shape (any command with `--json`): `{"error": {"code": "E-SCORE-002", "mes
 
 No personal-data fields exist in any schema (DI-013). Numbers full-precision; `percent: null` + `scoreable: false` when undefined.
 
-## Store Layout (format chosen at architecture; constraints per BC-2.02.008)
+## Store Layout (TOML per ADR-002; constraints per BC-2.02.008)
 
 ```
 <store>/
-  otposture.toml|yaml      # marker + site + schema_version + catalog pin
-  assessment.*             # current answers (one block per goal)
-  snapshots.*              # append-only records (seq-ordered)
-  overrides.*              # append-only override history
-  migrations.*             # back-cast records, series breaks, mapping digests
+  otposture.toml           # marker + site + schema_version + catalog pin
+  assessment.toml          # current answers (one [answers."N.X"] block per goal)
+  snapshots.toml           # append-only [[snapshot]] records (seq-ordered)
+  overrides.toml           # append-only override history
+  migrations.toml          # back-cast records, series breaks, mapping digests
   .lock                    # advisory lock (PID, host, start time)
 ```
 

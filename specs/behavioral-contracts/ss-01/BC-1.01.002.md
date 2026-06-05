@@ -37,7 +37,7 @@ Structural validation runs after parsing and before any catalog use. A defective
 
 1. A valid catalog is returned for use; an invalid catalog yields E-CAT-003 with a defect list and a non-zero exit.
 2. Each defect names: the rule violated, the offending element (`goal_id`/`function_id`/field), and the expected condition.
-3. Validation checks at minimum: (a) unique `goal_id`s; (b) every `goal.function_id` resolves; (c) every `weight > 0`; (d) `default_tier` ∈ {Critical, High, Standard}; (e) an ordered band list of N ≥ 2 bands with exactly N−1 interior thresholds, strictly increasing, each in (0,1) exclusive — the lowest band starts at 0 implicitly, and N ≥ 2 guarantees the positional floor-cap band exists (DI-003); bundled catalog: 4 bands, 3 thresholds; (f) non-empty `licensing_provenance` (DI-009); (g) valid semver `version`; (h) impact/effort metadata present for every goal (CAP-009 dependency).
+3. Validation checks at minimum: (a) unique `goal_id`s; (b) every `goal.function_id` resolves; (c) every weight in `0 < weight ≤ 10⁶` (upper cap rules out rational-overflow pathologies — ADR-003); (d) `default_tier` ∈ {Critical, High, Standard}; (e) an ordered band list of N ≥ 2 bands with exactly N−1 interior thresholds, strictly increasing, each in (0,1) exclusive — the lowest band starts at 0 implicitly, and N ≥ 2 guarantees the positional floor-cap band exists (DI-003); bundled catalog: 4 bands, 3 thresholds; (f) non-empty `licensing_provenance` (DI-009); (g) valid semver `version`; (h) impact/effort metadata present for every goal (CAP-009 dependency).
 
 ## Invariants
 

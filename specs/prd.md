@@ -99,8 +99,8 @@ From `domain-spec/assumptions.md`: ASM-001 ✅ validated (CPG 2.0 TLP:CLEAR, 202
 
 ## Open Questions
 
-1. **Store format choice (YAML vs TOML vs JSON-with-comments)** — deferred to architecture; BC-2.02.008's determinism/diffability constraints are format-agnostic and binding.
-2. **Default band thresholds (t1,t2,t3)** — catalog data; proposal (.40/.65/.85) needs a written rationale in the catalog before v1 (R-002).
-3. **Default weights** — v1 proposal: uniform weights with criticality expressed via tiers + floor rule rather than weight skew (simpler to defend); confirm during catalog authoring.
+1. **Store format choice** — ✅ RESOLVED (2026-06-05): TOML with a custom deterministic emitter, per ADR-002 (user-validated). BC-2.02.008's constraints remain binding.
+2. **Default band thresholds (t1,t2,t3)** — ✅ RESOLVED (2026-06-05): 0.40/0.65/0.85 with level-semantics rationale, per ADR-004; encoded as revisable catalog data with embedded rationale comments.
+3. **Default weights** — ✅ RESOLVED (2026-06-05): uniform weights in v1; criticality expressed via tiers + floor rule, per ADR-005. Engine remains weight-capable.
 4. **Goal-mapping table format for migrations** (BC-2.02.006) — needed only when CPG 2.1+ ships; design with the catalog schema.
 5. **`snapshot` auto-take on `report`** when the Assessment is dirty (events.md notes this as a PRD decision) — current decision: **no implicit snapshots**; `report` warns if Assessment differs from the latest snapshot. Revisit after dogfood.
