@@ -82,6 +82,6 @@ otposture models **continuous OT security posture tracking** for a single indust
 ## Key Domain Decisions (resolved with the human, 2026-06-05)
 
 1. **History model:** self-contained append-only snapshots; git is a layer on top, not a dependency.
-2. **Bands:** four named — Foundational / Developing / Managed / Resilient (thresholds in catalog data).
+2. **Bands:** four named in the bundled catalog — Foundational / Developing / Managed / Resilient. Names, count (N ≥ 2), and thresholds are catalog data (DI-008); the floor-cap band is positional (second-lowest), so renames/re-counts never break the floor rule.
 3. **Criticality tiers:** opinionated cited defaults in the catalog, site-overridable with mandatory rationale.
 4. **Next best actions:** static catalog impact/effort metadata in v1; no user-supplied estimates.

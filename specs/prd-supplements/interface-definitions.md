@@ -72,7 +72,7 @@ GLOBAL: --store <DIR> (default: ./)  --debug  --no-color  --help  --version
   "catalog": {"id": "cisa-cpg", "version": "2.0.0", "digest": "sha256:..."},
   "score": {
     "scoreable": true,
-    "percent": 0.6176,
+    "percent": 0.6765,
     "band": "developing",
     "band_uncapped": "managed",
     "floor_rule": {"triggered": true, "gaps": [{"goal": "3.H", "level": "unknown", "tier_source": "default"}]},
@@ -86,9 +86,9 @@ GLOBAL: --store <DIR> (default: ./)  --debug  --no-color  --help  --version
     "composition_adjustment": 0.0,
     "derived_via_backcast": false
   },
-  "overrides": [{"goal": "3.H", "tier": "standard", "rationale": "...", "created_at": "..."}],
+  "overrides": [{"goal": "3.N", "tier": "high", "rationale": "...", "created_at": "..."}],
   "series_breaks": [{"at_seq": 12, "from_version": "2.0.0", "to_version": "2.1.0", "bridged": false}],
-  "next_actions": [{"goal": "3.D", "gain": 0.06, "effort": "simple", "impact": "high", "floor_gating": false}]
+  "next_actions": [{"goal": "3.D", "potential_gain": 0.06, "effort": "simple", "impact": "high", "floor_gating": false}]
 }
 ```
 
