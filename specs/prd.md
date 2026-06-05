@@ -84,7 +84,7 @@ See `prd-supplements/error-taxonomy.md` — categories CAT/STORE/VAL/LOCK/SCORE/
 
 ## 7. Module Criticality
 
-See `prd-supplements/module-criticality.md`. CRITICAL: scoring core, posture store. The scoring core is the formal-verification target (Kani on VP-040/041/044/046/047/048/049/050/053).
+See `prd-supplements/module-criticality.md`. CRITICAL: scoring core, posture store. The scoring core is the formal-verification target (Kani on VP-040/041/044/046/047/048/049/050/053/056).
 
 ## Cross-Cutting Concerns
 

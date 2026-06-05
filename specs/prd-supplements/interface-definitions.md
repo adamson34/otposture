@@ -40,6 +40,7 @@ COMMANDS:
               --exec  --out <PATH> (default: ./otposture-report-<date>-s<seq>.html)
               --from <REF> --to <REF> (default: previous vs latest)  --force
   verify    Recompute and check all cached scores & integrity    [--json]
+              (exit 0 = all checks pass; exit 4 = findings reported — CI-gate semantics, BC-6.06.001)
               (read-only: reports mismatches and orphans, never repairs or rewrites)
   migrate   Move store to a new catalog version
               --catalog <PATH>  --mapping <PATH>  --series-break (explicit opt-in when unmappable)

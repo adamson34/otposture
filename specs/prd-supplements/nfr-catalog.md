@@ -26,7 +26,7 @@ traces_to: prd.md
 | NFR-005 | Performance | Binary footprint & startup suitable for locked-down workstations | single static binary < 25 MB; cold start < 200 ms; no admin rights, no installer | CI size gate + portable-execution test (ASM-007) | P1 | ASM-007 |
 | NFR-006 | Security | No PII anywhere: schema, store, reports, JSON, diagnostics | 0 personal-data fields; free-text documented non-PII | schema review + report/JSON audit (DI-013) | P0 | DI-013 |
 | NFR-007 | Security | Store free text is untrusted input: HTML-escaped in reports, control-char-rejected at entry | 0 injection paths | fuzz store→render (VP-075) | P0 | BC-5.05.003 EC-004 |
-| NFR-008 | Reliability | Scoring-core quality gate: CRITICAL-tier mutation kill rate | ≥ 95% (scoring core, store); Kani proofs on VP-040/041/044/046/047/048/049/050/053 | cargo-mutants + Kani in CI | P0 | R-005 |
+| NFR-008 | Reliability | Scoring-core quality gate: CRITICAL-tier mutation kill rate | ≥ 95% (scoring core, store); Kani proofs on VP-040/041/044/046/047/048/049/050/053/056 | cargo-mutants + Kani in CI | P0 | R-005 |
 | NFR-009 | Maintainability | Pure core / effectful shell separation: scoring crate has no I/O dependency | crate-graph enforced | CI lint (VP-051) | P0 | DI-010 |
 | NFR-010 | Scalability | Store performance over years of use | 500 snapshots × 34 goals: all commands < 1 s, store < 10 MB | synthetic-history benchmark | P1 | — |
 

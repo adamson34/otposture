@@ -44,9 +44,9 @@ traces_to: prd.md
 | E-VAL-010 | broken | 3 | Migration has no mapping for this version pair and `--series-break` was not passed / supply `--mapping` or explicitly opt into a series break |
 | E-STORE-001 | broken | 4 | Store already exists; `init` never overwrites |
 | E-STORE-002 | broken | 4 | Corrupt record at <file:record>; valid prefix loadable read-only / repair guidance |
-| E-STORE-003 | degraded | 0 (warning via `verify`) | Cached score mismatch — tamper or engine drift; details listed |
+| E-STORE-003 | degraded | 0 as load-time warning; **4 when reported by `verify`** (findings are verify's results — BC-6.06.001 Inv 2 exception) | Cached score mismatch — tamper or engine drift; details listed |
 | E-STORE-004 | broken | 4 | Store written by newer otposture / upgrade the binary |
-| E-STORE-005 | degraded | 0 (warning) | Orphan answer at load (goal absent from pinned catalog) — quarantined from scoring; listed by status/verify until removed or migrated |
+| E-STORE-005 | degraded | 0 as load-time warning; **4 when reported by `verify`** (BC-6.06.001 Inv 2 exception) | Orphan answer at load (goal absent from pinned catalog) — quarantined from scoring; listed by status/verify until removed or migrated |
 | E-LOCK-001 | broken | 5 | Store in use by PID since T / wait or investigate; stale locks auto-break |
 | E-CAT-001 | broken | 6 | Catalog structurally unparseable / check path & format |
 | E-CAT-002 | broken | 6 | Catalog schema newer than binary / upgrade binary |
