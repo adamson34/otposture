@@ -33,6 +33,7 @@ traces_to: prd.md
 
 | Error Code | Severity | Exit | Message gist / Remedy |
 |-----------|----------|------|----------------------|
+| E-VAL-001 | — | — | Reserved (unallocated; kept vacant to avoid renumbering — do not assign) |
 | E-VAL-002 | broken | 3 | Site name contains control characters / choose a printable name |
 | E-VAL-003 | broken | 3 | Label contains newline or control characters / single-line labels only |
 | E-VAL-004 | broken | 3 | Unknown goal ID / nearest-match suggestions listed |

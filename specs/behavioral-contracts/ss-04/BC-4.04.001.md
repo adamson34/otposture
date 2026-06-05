@@ -27,7 +27,7 @@ removal_reason: null
 
 ## Description
 
-The single scoring formula (DI-012): `percent = Σ(weight_g × value_g) / Σ(weight_g)` over applicable goals. Level values are **exact rationals** — NI=0, PI=1/3, LI=2/3, FI=1, Unknown=0 (displayed as 0.33/0.67); arithmetic is rational/fixed-point, never binary floating point. N/A excluded entirely (DI-004). This is the most formally-verified function in the product.
+The single scoring formula (DI-012): `percent = Σ(weight_g × value_g) / Σ(weight_g)` over applicable goals. Level values are **exact rationals** — NI=0, PI=1/3 (displays as 0.33), LI=2/3 (displays as 0.67), FI=1, Unknown=0; arithmetic is rational/fixed-point, never binary floating point. N/A excluded entirely (DI-004). This is the most formally-verified function in the product.
 
 ## Preconditions
 

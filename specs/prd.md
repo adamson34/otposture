@@ -61,7 +61,7 @@ Full per-BC listing: `behavioral-contracts/BC-INDEX.md` (33 contracts). Section/
 
 ## 3. Interface Definition
 
-See `prd-supplements/interface-definitions.md` — CLI surface (10 commands), exit-code semantics, JSON schema outline, store/catalog file formats.
+See `prd-supplements/interface-definitions.md` — CLI surface (11 commands), exit-code semantics, JSON schema outline, store/catalog file formats.
 
 ## 4. Non-Functional Requirements
 
