@@ -1,0 +1,27 @@
+# Sprint state: otposture v0.1.0-greenfield
+# Status values: pending | blocked | in_progress | in_review | done
+current_wave: 1
+stories:
+  S-1.01: {status: pending, wave: 1, branch: null, worktree: null}
+  S-1.02: {status: blocked, wave: 2, blocked_by: [S-1.01]}
+  S-1.03: {status: blocked, wave: 3, blocked_by: [S-1.02]}
+  S-2.01: {status: blocked, wave: 3, blocked_by: [S-1.02]}
+  S-3.01: {status: blocked, wave: 3, blocked_by: [S-1.02]}
+  S-1.04: {status: blocked, wave: 4, blocked_by: [S-1.03]}
+  S-2.02: {status: blocked, wave: 4, blocked_by: [S-2.01]}
+  S-3.02: {status: blocked, wave: 4, blocked_by: [S-3.01]}
+  S-1.05: {status: blocked, wave: 5, blocked_by: [S-1.04]}
+  S-1.06: {status: blocked, wave: 5, blocked_by: [S-1.04]}
+  S-2.03: {status: blocked, wave: 5, blocked_by: [S-2.02]}
+  S-3.03: {status: blocked, wave: 5, blocked_by: [S-3.02, S-1.04]}
+  S-3.04: {status: blocked, wave: 6, blocked_by: [S-3.03, S-1.05]}
+  S-4.01: {status: blocked, wave: 6, blocked_by: [S-3.03, S-1.04]}
+  S-5.01: {status: blocked, wave: 6, blocked_by: [S-1.05, S-1.06, S-3.03]}
+  S-3.05: {status: blocked, wave: 7, blocked_by: [S-3.03]}
+  S-4.02: {status: blocked, wave: 7, blocked_by: [S-4.01]}
+  S-4.03: {status: blocked, wave: 7, blocked_by: [S-4.01]}
+  S-5.02: {status: blocked, wave: 7, blocked_by: [S-5.01]}
+  S-5.03: {status: blocked, wave: 8, blocked_by: [S-5.02]}
+  S-6.01: {status: blocked, wave: 9, blocked_by: [S-2.03, S-3.04, S-3.05, S-4.02, S-4.03, S-5.03]}
+  S-6.02: {status: blocked, wave: 10, blocked_by: [S-6.01]}
+  S-6.03: {status: blocked, wave: 10, blocked_by: [S-6.01]}
