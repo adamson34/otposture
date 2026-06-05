@@ -65,7 +65,7 @@ otposture models **continuous OT security posture tracking** for a single indust
 | ID Format | Count | Section |
 |-----------|-------|---------|
 | CAP-NNN | 13 | capabilities.md |
-| DI-NNN | 12 | invariants.md |
+| DI-NNN | 13 | invariants.md |
 | DEC-NNN | 12 | edge-cases.md |
 | ASM-NNN | 8 | assumptions.md |
 | R-NNN | 8 | risks.md |
