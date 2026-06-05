@@ -39,7 +39,7 @@ All ten formal targets live in `op-score` on bounded inputs (catalog ≤ 64 goal
 
 ## Property-Test Layer (proptest — unbounded random)
 
-- Round-trips: catalog parse/serialize (VP-001), store codec (VP-022/023/024), JSON schema (VP-085)
+- Round-trips: catalog parse/serialize (VP-001), store codec (VP-022/023/024)
 - Metamorphic: permutation invariance (VP-043), N/A independence (VP-042), sub-score independence (VP-045), NBA gain truthfulness (VP-058)
 - Stateful: append-only byte stability (VP-014), seq gaplessness (VP-015), session durability monotonicity (VP-032), upgrade content preservation (VP-025/027)
 
@@ -53,7 +53,7 @@ Parser targets: catalog TOML (VP-002), store files (VP-016), HTML-escape path wi
 
 ## Environment-Gate Layer (CI)
 
-Syscall-trace harness for the offline guarantee (VP-083), cargo-deny dependency bans (VP-084), cross-platform golden score matrix (VP-052), exit-code matrix (VP-080), purity lint — no I/O crates under op-score (VP-051).
+Syscall-trace harness for the offline guarantee (VP-083), cargo-deny dependency bans (VP-084), cross-platform golden score matrix (VP-052), exit-code matrix (VP-080), JSON Schema validation of all `--json` outputs (VP-085), purity lint — no I/O crates under op-score (VP-051).
 
 ## Testable-Only (explicitly not provable, and why)
 

@@ -73,26 +73,35 @@ GLOBAL: --store <DIR> (default: ./)  --debug  --no-color  --help  --version
   "catalog": {"id": "cisa-cpg", "version": "2.0.0", "digest": "sha256:..."},
   "score": {
     "scoreable": true,
-    "percent": 0.6765,
-    "percent_exact": "23/34",
+    "percent": 0.7172,
+    "percent_exact": "71/99",
     "band": "developing",
     "band_uncapped": "managed",
     "floor_rule": {"triggered": true, "gaps": [{"goal": "3.H", "level": "unknown", "tier_source": "default"}]},
-    "functions": [{"id": "govern", "percent": 0.55, "scoreable": true}],
+    "functions": [{"id": "govern", "percent": 0.5333, "percent_exact": "8/15", "scoreable": true}],
     "unknown_count": 4, "na_count": 1, "assessed": 30, "total": 34
   },
   "delta": {
-    "from_seq": 3, "to_seq": 5, "percent_delta": 0.08,
-    "band_change": {"from": "foundational", "to": "developing"},
-    "drivers": [{"goal": "2.E", "from": "not", "to": "full", "points": 0.0294}],
+    "from_seq": 3, "to_seq": 5,
+    "percent_delta": 0.0404, "percent_delta_exact": "4/99",
+    "band_change": {"from": "developing", "to": "developing"},
+    "drivers": [
+      {"goal": "2.E", "from": "not", "to": "full", "points": 0.0303, "points_exact": "1/33"},
+      {"goal": "1.B", "from": "partial", "to": "large", "points": 0.0101, "points_exact": "1/99"}
+    ],
     "composition_adjustment": 0.0,
     "derived_via_backcast": false
   },
   "overrides": [{"goal": "3.N", "tier": "high", "rationale": "...", "created_at": "..."}],
-  "series_breaks": [{"at_seq": 12, "from_version": "2.0.0", "to_version": "2.1.0", "bridged": false}],
-  "next_actions": [{"goal": "3.D", "potential_gain": 0.06, "effort": "simple", "impact": "high", "floor_gating": false}]
+  "series_breaks": [],
+  "next_actions": [
+    {"goal": "3.H", "potential_gain": 0.0303, "potential_gain_exact": "1/33", "effort": "moderate", "impact": "high", "floor_gating": true},
+    {"goal": "3.D", "potential_gain": 0.0202, "potential_gain_exact": "2/99", "effort": "simple", "impact": "high", "floor_gating": false}
+  ]
 }
 ```
+
+**This example is one self-consistent vector** (uniform weights per ADR-005, bundled 34-goal catalog): 1 N/A ⇒ applicable = 33; levels 18 FI + 6 LI + 5 PI + 4 Unknown ⇒ percent = (18 + 6·2/3 + 5·1/3)/33 = **71/99 ≈ 0.7172** (Managed range uncapped; floor-capped to Developing by 3.H). GOVERN function: 1 FI + 2 LI + 1 PI + 1 Unknown of 5 ⇒ 8/15 (functions array elided to one entry for brevity — the real document lists all six). Delta: 2.E not→full (1/33) + 1.B partial→large (1/99) = **4/99 ≈ 0.0404**, composition 0, drivers reconcile exactly (DI-005). Next actions: floor-gating 3.H listed first per BC-4.04.008; max single-goal gain under uniform weights is 1/33.
 
 `verify --json` emits a distinct check-results document (not the score/delta projection):
 
