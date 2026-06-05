@@ -92,6 +92,20 @@ GLOBAL: --store <DIR> (default: ./)  --debug  --no-color  --help  --version
 }
 ```
 
+`verify --json` emits a distinct check-results document (not the score/delta projection):
+
+```json
+{
+  "schema_version": "1.0.0",
+  "kind": "verify-results",
+  "snapshots_checked": 12,
+  "score_mismatches": [{"seq": 7, "field": "percent", "cached": "2/3", "recomputed": "1/2", "engine_version_at_write": "0.3.0"}],
+  "orphan_answers": [{"goal": "2.F", "reason": "absent-from-pinned-catalog"}],
+  "integrity_errors": [],
+  "ok": false
+}
+```
+
 Error shape (any command with `--json`): `{"error": {"code": "E-SCORE-002", "message": "...", "help": "..."}}`
 
 No personal-data fields exist in any schema (DI-013). Numbers full-precision; `percent: null` + `scoreable: false` when undefined.

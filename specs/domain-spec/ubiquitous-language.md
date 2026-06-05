@@ -21,13 +21,13 @@ traces_to: L2-INDEX.md
 | **Framework Catalog** | A versioned, machine-readable encoding of a security framework (v1: CISA CPG 2.0): Goals grouped by Function, with weights, tier defaults, impact/effort metadata, band thresholds, and licensing provenance. Data, never code. |
 | **Goal** | One assessable item from a Framework Catalog (a CPG goal). The atomic unit of assessment and scoring. Synonym avoided: "control" (reserved for talking about other frameworks). |
 | **Function** | A Goal grouping inherited from the catalog (CPG 2.0: the six CSF functions — Govern, Identify, Protect, Detect, Respond, Recover). Sub-scores roll up per Function. |
-| **Implementation Level** | The ordinal answer for a Goal: `Not Implemented (0)` / `Partially (0.33)` / `Largely (0.67)` / `Fully (1.0)`, plus `Not Applicable` (excluded from scoring) and `Unknown` (scores 0, flagged). |
+| **Implementation Level** | The ordinal answer for a Goal: `Not Implemented (0)` / `Partially (1/3)` / `Largely (2/3)` / `Fully (1)` — exact rationals, displayed as 0.33/0.67 — plus `Not Applicable` (excluded from scoring) and `Unknown` (scores 0, flagged). |
 | **Answer** | An Implementation Level for one Goal, with timestamp and optional note. Unanswered Goals are implicitly `Unknown`. |
 | **Assessment** | The current working set of Answers for a Site against a pinned catalog version. Mutable; always partially completable. |
 | **Snapshot** | An immutable, sequence-numbered capture of the Assessment plus its computed Score, appended to history. The unit of "posture at a point in time." |
 | **Score** | Derived result of scoring a Snapshot: Maturity Band (headline), percentage, per-Function sub-scores, floor-rule status. Deterministic: same Answers + same catalog ⇒ same Score. |
 | **Maturity Band** | Headline rating: **Foundational → Developing → Managed → Resilient**. Thresholds defined in the catalog. The band, not the %, is the hero number. |
-| **Floor Rule** | Constraint capping the headline Band at **Developing** while any Critical-tier Goal is `Not Implemented` or `Unknown` — a fatal gap cannot be averaged away. |
+| **Floor Rule** | Constraint capping the headline Band at the **floor-cap band** (positionally: the second-lowest band in the catalog's ordered list — "Developing" in the bundled catalog) while any Critical-tier Goal is `Not Implemented` or `Unknown` — a fatal gap cannot be averaged away. |
 | **Criticality Tier** | `Critical` / `High` / `Standard` per Goal. Catalog ships cited defaults; a Site may apply a Tier Override. |
 | **Tier Override** | A Site-local change to a Goal's tier, requiring a non-empty rationale; recorded and surfaced in reports (auditable, anti-gaming). |
 | **Delta** | The difference between two Snapshots sharing a catalog version: signed score change plus its Drivers. |

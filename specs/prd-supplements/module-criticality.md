@@ -35,8 +35,8 @@ traces_to: prd.md
 
 | Module | Subsystem | Tier | Rationale | Kill Rate Target | VP Count |
 |--------|-----------|------|-----------|-----------------|----------|
-| scoring-core | SS-04 | CRITICAL | A scoring defect ships wrong numbers to a COO — the worst failure for a credibility product (R-005); formal-verification target | ≥ 95% | 20 (VP-040..059) |
-| posture-store | SS-02 | CRITICAL | History loss/corruption destroys months of un-recreatable posture data (R-006); honesty guarantees live here (DI-002) | ≥ 95% | 15 (VP-010..024) |
+| scoring-core | SS-04 | CRITICAL | A scoring defect ships wrong numbers to a COO — the worst failure for a credibility product (R-005); formal-verification target | ≥ 95% | 20 used, VP-040..059 (range VP-040..069 reserved per BC-INDEX) |
+| posture-store | SS-02 | CRITICAL | History loss/corruption destroys months of un-recreatable posture data (R-006); honesty guarantees live here (DI-002) | ≥ 95% | 18 used, VP-010..027 (range VP-010..029 reserved per BC-INDEX) |
 | catalog | SS-01 | HIGH | Wrong framework content misleads real decisions; gateway validation protects everything downstream | ≥ 90% | 8 (VP-001..008) |
 | assessment | SS-03 | HIGH | Data-entry integrity and override auditability (DI-006, DI-011) | ≥ 90% | 7 (VP-030..036) |
 | reporting | SS-05 | HIGH | Exec-facing artifact; disclosure rules and injection safety (NFR-007) | ≥ 90% | 7 (VP-070..076) |

@@ -27,7 +27,7 @@ removal_reason: null
 
 ## Description
 
-The credibility centerpiece (DI-003): while any effective-Critical-tier goal is `Not Implemented` or `Unknown`, the headline band cannot exceed **Developing**. A fatal gap can never be averaged away — the direct answer to the canonical CISO objection.
+The credibility centerpiece (DI-003): while any effective-Critical-tier goal is `Not Implemented` or `Unknown`, the headline band cannot exceed the **floor-cap band** — defined positionally as the second-lowest band in the catalog's ordered band list ("Developing" in the bundled CPG catalog), so the rule survives catalog band renames (DI-008). A fatal gap can never be averaged away — the direct answer to the canonical CISO objection.
 
 ## Preconditions
 
@@ -35,7 +35,7 @@ The credibility centerpiece (DI-003): while any effective-Critical-tier goal is 
 
 ## Postconditions
 
-1. If the gating set {goals: effective_tier = Critical ∧ level ∈ {NI, Unknown}} is non-empty: final band = min(band_uncapped, Developing); `floor_rule_triggered = true`; `critical_gaps[]` lists every gating goal with its level and effective-tier source (default vs. override).
+1. If the gating set {goals: effective_tier = Critical ∧ level ∈ {NI, Unknown}} is non-empty: final band = min(band_uncapped, floor_cap_band) where floor_cap_band = the catalog's second-lowest band (positional, not by name); `floor_rule_triggered = true`; `critical_gaps[]` lists every gating goal with its level and effective-tier source (default vs. override).
 2. If empty: final band = band_uncapped; `floor_rule_triggered = false`.
 3. The percent is never altered by the floor rule — only the band (DEC-010: they may move in opposite directions, both shown).
 
@@ -67,7 +67,7 @@ The credibility centerpiece (DI-003): while any effective-Critical-tier goal is 
 
 | VP | Property | Proof Method |
 |----|----------|-------------|
-| VP-048 | Floor soundness: gating set non-empty ⇒ final band ≤ Developing | kani |
+| VP-048 | Floor soundness: gating set non-empty ⇒ final band ≤ floor_cap_band (the catalog's second-lowest band, positional) | kani |
 | VP-049 | Floor completeness: gating set empty ⇒ final band = band_uncapped | kani |
 | VP-050 | critical_gaps[] = exactly the gating set | kani/proptest |
 

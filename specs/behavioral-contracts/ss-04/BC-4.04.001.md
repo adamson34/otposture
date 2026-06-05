@@ -27,7 +27,7 @@ removal_reason: null
 
 ## Description
 
-The single scoring formula (DI-012): `percent = Σ(weight_g × value_g) / Σ(weight_g)` over applicable goals. Level values: NI=0, PI=0.33, LI=0.67, FI=1.0, Unknown=0; N/A excluded entirely (DI-004). This is the most formally-verified function in the product.
+The single scoring formula (DI-012): `percent = Σ(weight_g × value_g) / Σ(weight_g)` over applicable goals. Level values are **exact rationals** — NI=0, PI=1/3, LI=2/3, FI=1, Unknown=0 (displayed as 0.33/0.67); arithmetic is rational/fixed-point, never binary floating point. N/A excluded entirely (DI-004). This is the most formally-verified function in the product.
 
 ## Preconditions
 
@@ -57,7 +57,7 @@ The single scoring formula (DI-012): `percent = Σ(weight_g × value_g) / Σ(wei
 | Input | Expected Output | Category |
 |-------|----------------|----------|
 | 2 goals, equal weight, FI + NI | 0.50 | happy-path |
-| 3 goals w=1,1,2: FI, PI, N/A | (1.0 + 0.33)/2 = 0.665 | edge-case |
+| 3 goals w=1,1,2: FI, PI, N/A | (1 + 1/3)/2 = 2/3 exactly (displays "67%") | edge-case |
 | 34-goal catalog, all Unknown | 0.0 | edge-case |
 | Weight = 0 in input | Unreachable (BC-1.01.002); engine asserts E-SCORE-001 if violated | error |
 

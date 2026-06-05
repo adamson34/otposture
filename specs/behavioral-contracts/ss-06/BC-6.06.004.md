@@ -36,7 +36,7 @@ removal_reason: null
 ## Postconditions
 
 1. stdout is exactly one JSON document (no banners/spinners); diagnostics still on stderr; exit codes unchanged (BC-6.06.001).
-2. Document carries `schema_version` (semver; additive changes minor, breaking major) plus the full data of the human view: score (band, uncapped band, percent full-precision, floor state, gaps), sub-scores, unknown count, deltas with full-precision driver points, overrides, series breaks.
+2. Document carries `schema_version` (semver; additive changes minor, breaking major) plus the full data of the human view. For `status`/`diff`: score (band, uncapped band, percent full-precision, floor state, gaps), sub-scores, unknown count, deltas with full-precision driver points, overrides, series breaks. For `verify`: a distinct check-results document — snapshots checked, score mismatches (seq, expected, actual), quarantined orphans, integrity errors, and an overall `ok` boolean (shape outlined in interface-definitions.md).
 3. Numbers are emitted at full precision; display rounding is the consumer's choice.
 4. No personal data fields exist in the schema (DI-013).
 

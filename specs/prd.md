@@ -51,13 +51,13 @@ A single-binary offline Rust CLI: CISA CPG 2.0 encoded as a validated data catal
 | ID | Subsystem | Description | Criticality | BCs |
 |----|-----------|-------------|-------------|-----|
 | SS-01 | Framework Catalog | Catalog parse/validate; bundled CPG 2.0 content; identity & digests | HIGH | 4 |
-| SS-02 | Posture Store | Local persistence: init, atomic writes, append-only snapshots, integrity, locking, migration/series breaks, deterministic serialization | CRITICAL | 8 |
+| SS-02 | Posture Store | Local persistence: init, atomic writes, append-only snapshots, integrity, locking, migration/series breaks, deterministic serialization, schema upgrade | CRITICAL | 9 |
 | SS-03 | Assessment | Guided + direct answering, Unknown semantics, tier overrides | HIGH | 4 |
 | SS-04 | Scoring Engine | Pure core: percent, sub-scores, bands, floor rule, deltas/drivers, comparability, next-best-actions | CRITICAL | 8 |
 | SS-05 | Reporting | Status, diff display, exec HTML report, output safety | HIGH | 4 |
 | SS-06 | CLI Surface | Commands, exit codes, error rendering, offline guarantee, JSON mode | MEDIUM | 4 |
 
-Full per-BC listing: `behavioral-contracts/BC-INDEX.md` (32 contracts). Section/subsystem numbering is aligned (Section N ⇔ SS-0N).
+Full per-BC listing: `behavioral-contracts/BC-INDEX.md` (33 contracts). Section/subsystem numbering is aligned (Section N ⇔ SS-0N).
 
 ## 3. Interface Definition
 

@@ -24,6 +24,7 @@
 | BC-2.02.006 | Back-Cast Migration Storage | CAP-011 | draft |
 | BC-2.02.007 | Series Break Recording and Enforcement | CAP-011 | draft |
 | BC-2.02.008 | Deterministic Human-Readable Serialization | CAP-002 | draft |
+| BC-2.02.009 | Store Schema Upgrade | CAP-002 | draft |
 
 ## SS-03 Assessment (HIGH) — `ss-03/`
 
@@ -67,6 +68,6 @@
 
 ## Coverage Summary
 
-- **Total BCs:** 32 (4 / 8 / 4 / 8 / 4 / 4 per subsystem)
+- **Total BCs:** 33 (4 / 9 / 4 / 8 / 4 / 4 per subsystem)
 - **Capability coverage:** CAP-001..011 all covered; CAP-012/013 deliberately uncovered (P2 schema-reserved, post-MVP)
 - **VP ranges reserved:** SS-01: VP-001..009 · SS-02: VP-010..029 · SS-03: VP-030..039 · SS-04: VP-040..069 · SS-05: VP-070..079 · SS-06: VP-080..089

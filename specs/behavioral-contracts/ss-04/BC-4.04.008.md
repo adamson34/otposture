@@ -65,7 +65,7 @@ Ranks improvable goals by `potential_gain / effort` using static catalog metadat
 
 | VP | Property | Proof Method |
 |----|----------|-------------|
-| VP-058 | Implementing recommendation #1 (to FI) yields percent gain = its stated potential_gain | proptest |
+| VP-058 | Implementing any listed recommendation (raising that goal to FI, all else fixed) yields a percent gain exactly equal to its stated potential_gain — rank-position-independent, so floor-gating reordering cannot falsify it | proptest |
 | VP-059 | Ranking determinism incl. tie-breaks | proptest |
 
 ## Traceability
